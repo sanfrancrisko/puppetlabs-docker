@@ -35,7 +35,7 @@ else
   root_dir = '/root'
 end
 
-describe 'docker' do
+describe 'docker' , :integration do
   package_name = 'docker-ce'
   service_name = 'docker'
   command = 'docker'

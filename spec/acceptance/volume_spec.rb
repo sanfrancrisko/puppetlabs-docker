@@ -16,7 +16,7 @@ else
   command = 'docker'
 end
 
-describe 'docker volume' do
+describe 'docker volume' , :integration do
   before(:all) do
     retry_on_error_matching(60, 5, %r{connection failure running}) do
       install_pp = "class { 'docker': #{docker_args} }"
