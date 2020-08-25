@@ -20,7 +20,7 @@ else
   skip = true
 end
 
-describe 'the Puppet Docker module' do
+describe 'the Puppet Docker module' , :integration do
   context 'with download location', skip: skip do
     let(:pp) do
       "
