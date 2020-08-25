@@ -24,7 +24,7 @@ else
   test_container = 'debian'
 end
 
-describe 'docker compose' do
+describe 'docker compose' , :integration do
   before(:all) do
     retry_on_error_matching(60, 5, %r{connection failure running}) do
       install_code = <<-code
